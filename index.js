@@ -70,6 +70,37 @@ app.post('/validate',(req,res) => { //This is the route called by the login func
 
 // These routes write
 
+//This is an accountant (edits accounts)
+app.post("/editAccount", (req, res)=> {
+  // grab the usernames from the database
+  knex.select('Email').from('Users').then(uname =>{
+    let aUsernames = [];
+    let limit = uname.length;
+    for(iCount = 0; iCount < uname.length + 1; iCount++)
+    {
+      aUsernames.push(uname[0].Email);
+      uname.shift();
+    }
+    // if the username is not in the database or if it is equal to the logged in account's username
+    // go ahead and edit the account
+    if ((!aUsernames.includes(req.body.email)) || (req.body.email == req.session.email))
+    { 
+    knex("Users").where("Email", req.body.email).update({
+      FirstName: req.body.fname,
+      LastName: req.body.lname,
+      Phone: req.body.phone,
+      Email: req.body.email,
+      OrgName: req.body.orgname,
+      Password: req.body.pword
+   }).then(myaccount => {})}
+
+   // otherwise, send them to reedit to do some javascript
+    else{return res.render('reedit')}
+
+  // redirect to account page after success
+  return res.redirect("/account");})
+});
+
 // This function gets the timestamp of the survey submission
 function getTodayDate() {
   // Implement this function as per your requirement
@@ -120,6 +151,15 @@ app.use('/loggedin', (req, res, next) => {
   next();
 })
 
+// This protects the account route
+app.use('/account', (req, res, next) => {
+  console.log(req.session.loggedIn)
+  if (!req.session.loggedIn) {
+    return res.redirect('/login');
+  }
+  next(); // Allow access to protected route
+});
+
 
 // pages
 //log in and log out
@@ -141,6 +181,16 @@ app.get('/loggedOut', (req, res) =>{
 //create a new account
 app.get('/createAccount', (req, res) =>{
   res.render('createAccount')
+});
+
+// account details
+app.get('/account', (req, res) =>{
+  knex.select().from('Users').where('Email', req.session.email).then(account =>{
+    res.render('account', {myaccount: account});
+  }).catch( err => {
+    console.log(err);
+    res.status(500).json({err});
+})
 });
 
 // homepage
