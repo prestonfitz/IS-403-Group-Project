@@ -224,7 +224,7 @@ app.post("/submitResponses", (req, res) => {
   const question1 = req.body.answer1;
 
 //   knex("CourseResponses").insert({
-//     UserID: req.body.userid,
+//     UserID: req.session.userid,
 //     ProductID: req.body.id,
 //     QuestionNum: 1,
 //     Response: req.body.answer1,
@@ -232,7 +232,7 @@ app.post("/submitResponses", (req, res) => {
 //  }).then(account => {});
 
 //   knex("CourseResponses").insert({
-//     UserID: req.body.userid,
+//     UserID: req.session.userid,
 //     ProductID: req.body.id,
 //     QuestionNum: 2,
 //     Response: req.body.answer2,
@@ -240,7 +240,7 @@ app.post("/submitResponses", (req, res) => {
 //  }).then(account => {});
 
 //   knex("CourseResponses").insert({
-//     UserID: req.body.userid,
+//     UserID: req.session.userid,
 //     ProductID: req.body.id,
 //     QuestionNum: 3,
 //     Response: req.body.answer3,
