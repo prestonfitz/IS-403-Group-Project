@@ -48,9 +48,9 @@ app.use(express.static(path.join(__dirname, '/views')));
 app.post('/validate',(req,res) => { //This is the route called by the login function
     knex.select('Email').from('Users').then(uname =>{
       for (icount = 0; icount < uname.length; icount++){
-      if (uname[icount].Email == req.body.email){
+      if (uname[icount].Email == req.body.username){
         icount = uname.length;
-        knex.select('Password','UserID', 'Email').from('Users').where('Email',req.body.email).then(pass =>{
+        knex.select('Password','UserID', 'Email').from('Users').where('Email',req.body.username).then(pass =>{
           if (pass[0].Password == req.body.password)
           {
             req.session.loggedIn = true;
@@ -68,6 +68,33 @@ app.post('/validate',(req,res) => { //This is the route called by the login func
     });
 })
 
+// protected functions
+// This helps the login page determine if it needs to generate an error message
+app.use('/loggedin', (req, res, next) => {
+  if (!req.session.loggedIn) {
+    return res.redirect('/relogin');
+  }
+
+  next();
+})
+
+
+// pages
+//log in and log out
+
+//This is when you mess up your login
+app.get('/relogin', (req,res) =>{
+  res.render('relog')
+})
+
+// these are log in log out pages designed to simply set a session storage variable
+app.get('/loggedin', (req, res) => {
+  res.render('loggedin')
+});
+
+app.get('/loggedOut', (req, res) =>{
+  res.render('loggedOut')
+});
 
 // homepage
 app.get("/", (req, res) => {      
