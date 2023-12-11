@@ -204,6 +204,15 @@
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm1()">
+                                        View Training
+                                    </button>
+                                    <div style="display: none;">
+                                        <form action="/displayTraining" method="post" id="trainingForm1">
+                                            <input type="hidden" id="trainingID" name="trainingID" value="1">
+                                            <input type="hidden" id="trainingName" name="trainingName" value="Professional Development">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -236,6 +245,15 @@
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm2()">
+                                        View Training
+                                    </button>
+                                    <div style="display: none;">
+                                        <form action="/displayTraining" method="post" id="trainingForm2">
+                                            <input type="hidden" id="trainingID" name="trainingID" value="2">
+                                            <input type="hidden" id="trainingName" name="trainingName" value="Monitoring and Evaluation">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,6 +286,15 @@
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm3()">
+                                        View Training
+                                    </button>
+                                    <div style="display: none;">
+                                        <form action="/displayTraining" method="post" id="trainingForm3">
+                                            <input type="hidden" id="trainingID" name="trainingID" value="3">
+                                            <input type="hidden" id="trainingName" name="trainingName" value="Level and Type of Staff Involvement">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -300,6 +327,15 @@
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm4()">
+                                        View Training
+                                    </button>
+                                    <div style="display: none;">
+                                        <form action="/displayTraining" method="post" id="trainingForm4">
+                                            <input type="hidden" id="trainingID" name="trainingID" value="4">
+                                            <input type="hidden" id="trainingName" name="trainingName" value="Instruction-based Focus/Vision">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -332,6 +368,15 @@
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm5()">
+                                        View Training
+                                    </button>
+                                    <div style="display: none;">
+                                        <form action="/displayTraining" method="post" id="trainingForm5">
+                                            <input type="hidden" id="trainingID" name="trainingID" value="5">
+                                            <input type="hidden" id="trainingName" name="trainingName" value="Resource Reallocation">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -364,6 +409,15 @@
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
                                     </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm6()">
+                                        View Training
+                                    </button>
+                                    <div style="display: none;">
+                                        <form action="/displayTraining" method="post" id="trainingForm6">
+                                            <input type="hidden" id="trainingID" name="trainingID" value="6">
+                                            <input type="hidden" id="trainingName" name="trainingName" value="Leadership">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -371,6 +425,26 @@
                 </div>
             </div>
         </div>
+        <script>
+            function submitForm1() {
+                document.getElementById("trainingForm1").submit();
+            }
+            function submitForm2() {
+                document.getElementById("trainingForm2").submit();
+            }
+            function submitForm3() {
+                document.getElementById("trainingForm3").submit();
+            }
+            function submitForm4() {
+                document.getElementById("trainingForm4").submit();
+            }
+            function submitForm5() {
+                document.getElementById("trainingForm5").submit();
+            }
+            function submitForm6() {
+                document.getElementById("trainingForm6").submit();
+            }
+        </script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
