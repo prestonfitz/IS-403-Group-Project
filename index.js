@@ -222,6 +222,18 @@ app.post("/submitResponses", (req, res) => {
   const name = req.body.name;
   const id = req.body.id;
   const question1 = req.body.answer1;
+
+//   knex("CourseResponses").insert({
+//     UserID: req.body.userid,
+//     ProductID: req.body.id,
+//     QuestionNum:,
+//     Email: req.body.email,
+//     OrgName: req.body.orgname,
+//     Password: req.body.pword,
+//     ProfilePicURL: req.body.profpic,
+//     DateCreated: getTodayDate()
+//  }).then(account => {});
+
   res.render('submitResponses', {name: name, id: id, question1: question1});
 })
 
