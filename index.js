@@ -27,8 +27,46 @@ app.use(session({
     },
   }));
 
-// load static
+// This app knex the website to a database. 
+const knex = require('knex')({
+  client: 'pg',
+  connection: {
+      host: process.env.RDS_HOSTNAME || 'localhost',
+      user: process.env.RDS_USERNAME || 'postgres',
+      password: process.env.RDS_PASSWORD || '4preston',
+      database: process.env.RDS_DB_NAME || 'project403',
+      port: process.env.RDS_PORT || 5432,
+      ssl: process.env.DB_SSL ? { rejectUnauthorized: false } : false
+    }
+  });
+
+// Because we want it to look nice
 app.use(express.static(path.join(__dirname, '/views')));
+
+//Log in log out functions
+//log in
+app.post('/validate',(req,res) => { //This is the route called by the login function
+    knex.select('Email').from('Users').then(uname =>{
+      for (icount = 0; icount < uname.length; icount++){
+      if (uname[icount].Email == req.body.email){
+        icount = uname.length;
+        knex.select('Password','UserID', 'Email').from('Users').where('Email',req.body.email).then(pass =>{
+          if (pass[0].Password == req.body.password)
+          {
+            req.session.loggedIn = true;
+            req.session.userid = pass[0].UserID;
+            req.session.email = pass[0].Email;
+            req.session.save(function (err) { //this is what we were missing for a while when baking cookies
+              if (err) return next(err)
+            });
+          }
+        })
+      }
+      
+    }
+    res.redirect('/loggedin')
+    });
+})
 
 
 // homepage
