@@ -28,17 +28,17 @@ app.use(session({
   }));
 
 // load static
-app.use(express.static(path.join(__dirname, '/html')));
+app.use(express.static(path.join(__dirname, '/views')));
 
 
 // homepage
 app.get("/", (req, res) => {      
-    res.sendFile(path.join(__dirname + '/html/index.html'));
+    res.render('index');
 });
 
 // log in
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname + '/html/login.html'))
+  res.render('login');
 });
 
 // Yahtzee - this file is used to make sure that everything works
