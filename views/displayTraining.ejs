@@ -98,5 +98,127 @@
                         </div>
                     </div>
                 </section>
+                        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Sample Survey Responses</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">
+                        <% if (id == 1) { %>
+                            How has your professional development helped you so far in your career?
+                        <% } %>
+                        <% if (id == 2) { %>
+                            How have monitoring and evaluating those in your stewardship helped build trust?
+                        <% } %>
+                        <% if (id == 3) { %>
+                            Why has involving other staff members in your endeavors been important in achieving your goals?
+                        <% } %>
+                        <% if (id == 4) { %>
+                            How do you prioritize the instruction of those in your stewardship?
+                        <% } %>
+                        <% if (id == 5) { %>
+                            Has the current allocation of resources helped or hindered your students in achieving their goals?
+                        <% } %>
+                        <% if (id == 6) { %>
+                            How has a great leader impacted your life--both personally and in your career?
+                        <% } %>
+                    </p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">
+                        <% if (id == 1) { %>
+                            What did you learn in the video about professional development?
+                        <% } %>
+                        <% if (id == 2) { %>
+                            What did you learn in the video about monitoring and evaluating?
+                        <% } %>
+                        <% if (id == 3) { %>
+                            What did you learn in the video about proper level and type of staff involvement?
+                        <% } %>
+                        <% if (id == 4) { %>
+                            What did you learn in the video about having an instruction-based vision?
+                        <% } %>
+                        <% if (id == 5) { %>
+                            What did you learn in the video about proper resource allocation?
+                        <% } %>
+                        <% if (id == 6) { %>
+                            What did you learn in the video about leadership in leading schools?
+                        <% } %>
+                    </p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">
+                        How will you implement your new findings to make your school a leading school?
+                    </p></div>
+                    <form id="formResponses" action="/submitResponses" method="post">
+                        <div class="row">
+                        <div class="col-lg-4 ms-auto">
+                            <textarea id="answer1" name="answer1" rows="5" maxlength="1000" class="form-control"></textarea>
+                        </div>
+                        <div class="col-lg-4 ms-auto">
+                            <textarea id="answer2" name="answer2" rows="5" maxlength="1000" class="form-control"></textarea>
+                        </div>
+                        <div class="col-lg-4 ms-auto">
+                            <textarea id="answer3" name="answer3" rows="5" maxlength="1000" class="form-control"></textarea>
+                        </div>
+                    </div>
+                        <input type="hidden" id="name" name="name" value="
+                        <% if (id == 1) { %>
+                            professional development
+                        <% } %>
+                        <% if (id == 2) { %>
+                            monitoring and evaluating
+                        <% } %>
+                        <% if (id == 3) { %>
+                            level and type of staff involvement
+                        <% } %>
+                        <% if (id == 4) { %>
+                            instruction-based vision
+                        <% } %>
+                        <% if (id == 5) { %>
+                            resource reallocation
+                        <% } %>
+                        <% if (id == 6) { %>
+                            leadership
+                        <% } %>">
+                        <input type="hidden" id="id" name="id" value="
+                        <% if (id == 1) { %>
+                            1
+                        <% } %>
+                        <% if (id == 2) { %>
+                            2
+                        <% } %>
+                        <% if (id == 3) { %>
+                            3
+                        <% } %>
+                        <% if (id == 4) { %>
+                            4
+                        <% } %>
+                        <% if (id == 5) { %>
+                            5
+                        <% } %>
+                        <% if (id == 6) { %>
+                            6
+                        <% } %>">
+                </form>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <button class="btn btn-xl btn-outline-light" onclick="submitResponse()">
+                        <!-- <i class="fas fa-download me-2"></i> -->
+                        Submit Answers
+                    </button>
+                </div>
+            </div>
+        </section>
+        <script>
+            function submitResponse() {
+                document.getElementById("formResponses").submit();
+            }
+        </script>
 </body>
 </html>

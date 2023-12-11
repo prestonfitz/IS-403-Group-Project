@@ -216,6 +216,14 @@ app.post("/displayTraining", (req, res) => {
   res.render("displayTraining", {name: trainingName, id: trainingID});
 });    
 
+// submit responses to the questions
+app.post("/submitResponses", (req, res) => {
+  console.log(req.body.answer1);
+  const name = req.body.name;
+  const id = req.body.id;
+  res.render('submitResponses', {name: name, id: id});
+})
+
 // about
 app.get("/about", (req, res) => {
   res.render('about');
