@@ -156,16 +156,17 @@
                     </p></div>
                     <form id="formResponses" action="/submitResponses" method="post">
                         <div class="row">
-                        <div class="col-lg-4 ms-auto">
-                            <textarea id="answer1" name="answer1" rows="5" maxlength="1000" class="form-control"></textarea>
+                            <div class="col-lg-4 ms-auto">
+                                <textarea id="answer1" name="answer1" rows="5" maxlength="1000" class="form-control"></textarea>
+                            </div>
+                            <div class="col-lg-4 ms-auto">
+                                <textarea id="answer2" name="answer2" rows="5" maxlength="1000" class="form-control"></textarea>
+                            </div>
+                            <div class="col-lg-4 ms-auto">
+                                <textarea id="answer3" name="answer3" rows="5" maxlength="1000" class="form-control"></textarea>
+                            </div>
                         </div>
-                        <div class="col-lg-4 ms-auto">
-                            <textarea id="answer2" name="answer2" rows="5" maxlength="1000" class="form-control"></textarea>
-                        </div>
-                        <div class="col-lg-4 ms-auto">
-                            <textarea id="answer3" name="answer3" rows="5" maxlength="1000" class="form-control"></textarea>
-                        </div>
-                    </div>
+                        <!-- <input type="hidden" id="userid" name="userid" value="<%= userid %>"> -->
                         <input type="hidden" id="name" name="name" value="
                         <% if (id == 1) { %>
                             professional development
