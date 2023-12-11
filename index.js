@@ -221,7 +221,8 @@ app.post("/submitResponses", (req, res) => {
   console.log(req.body.answer1);
   const name = req.body.name;
   const id = req.body.id;
-  res.render('submitResponses', {name: name, id: id});
+  const question1 = req.body.answer1;
+  res.render('submitResponses', {name: name, id: id, question1: question1});
 })
 
 // about
