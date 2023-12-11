@@ -96,6 +96,11 @@ app.get('/loggedOut', (req, res) =>{
   res.render('loggedOut')
 });
 
+//create a new account
+app.get('/createAccount', (req, res) =>{
+  res.render('createAccount')
+});
+
 // homepage
 app.get("/", (req, res) => {      
     res.render('index');
