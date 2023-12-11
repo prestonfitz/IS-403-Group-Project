@@ -162,7 +162,8 @@ app.get("/trainings", (req, res) => {
 app.post("/displayTraining", (req, res) => {
   console.log(req.body.trainingName);
   const trainingName = req.body.trainingName;
-  res.render("displayTraining", {name: trainingName});
+  const trainingID = req.body.trainingID;
+  res.render("displayTraining", {name: trainingName, id: trainingID});
 });    
 
 // about
