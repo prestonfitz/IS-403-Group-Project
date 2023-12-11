@@ -158,6 +158,13 @@ app.get("/trainings", (req, res) => {
   res.render('trainings');
 });
 
+// display a training
+app.post("/displayTraining", (req, res) => {
+  console.log(req.body.trainingName);
+  const trainingName = req.body.trainingName;
+  res.render("displayTraining", {name: trainingName});
+});    
+
 // about
 app.get("/about", (req, res) => {
   res.render('about');
