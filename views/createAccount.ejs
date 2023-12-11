@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="This is the simple sample homepage for the group project. Somebody should change this description later." />
+        <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
+        <title>Home | Karen Brock</title>
+        <!-- Favicon-->
+        <!-- Original favicon src= assets/favicon.ico -->
+        <link rel="icon" type="image/x-icon" href="assets/img/circle3.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            td  {padding: 10px;}
+
+            label   {font-size: large;}
+
+            input[type=text]    {font-size: large;
+                                border-radius: 10px;
+                                border-color: #1abc9c;}
+
+            .option {width: 15%;}
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Karen J. Brock: Leading Schools</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/trainings">Trainings</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <h1>Create New Account:</h1>
+                <form>
+                    <table style="margin: auto;">
+                        <tr>
+                            <td style="text-align: right;"><label for="fname">First Name:</label></td>
+                            <td style="text-align: left;"><input type="text" name="fname" id="fname"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><label for="lname">Last Name:</label></td>
+                            <td style="text-align: left;"><input type="text" name="lname" id="lname"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><label for="phone">Phone Number:</label></td>
+                            <td style="text-align: left;"><input type="text" name="phone" id="phone"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><label for="orgname">Organization:</label></td>
+                            <td style="text-align: left;"><input type="text" name="orgname" id="orgname"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><label for="email">Email:</label></td>
+                            <td style="text-align: left;"><input type="text" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><label for="pword">Password:</label></td>
+                            <td style="text-align: left;"><input type="text" name="pword" id="pword"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Choose a profile picture:</label></td>
+                        </tr>
+                    </table>
+                    <input type="radio" name="profpic" id="1" value="1">
+                    <label for="1"><img src="assets/img/portfolio/1.png" class="option"></label>
+                    <input type="radio" name="profpic" id="2" value="2">
+                    <label for="2"><img src="assets/img/portfolio/2.png" class="option"></label>
+                    <input type="radio" name="profpic" id="3" value="3">
+                    <label for="3"><img src="assets/img/portfolio/3.png" class="option"></label>
+                    <input type="radio" name="profpic" id="4" value="4">
+                    <label for="4"><img src="assets/img/portfolio/4.png" class="option"></label>
+                    <input type="radio" name="profpic" id="5" value="5">
+                    <label for="5"><img src="assets/img/portfolio/5.png" class="option"></label>
+                    <input type="radio" name="profpic" id="6" value="6">
+                    <label for="6"><img src="assets/img/portfolio/6.png" class="option"></label>
+
+                    <br/><br/><br/><br/>
+                    <button type="submit" class="btn btn-primary btn-xl" style="border-color: white;">Create Account</button>
+                </form>
+            </div>
+        </header>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
