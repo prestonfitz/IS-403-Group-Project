@@ -208,7 +208,7 @@ app.get("/trainings", (req, res) => {
   res.render('trainings');
 });
 
-// display a training
+// display a training and pass parameters to dynamically change the page
 app.post("/displayTraining", (req, res) => {
   console.log(req.body.trainingName);
   const trainingName = req.body.trainingName;
