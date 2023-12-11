@@ -79,6 +79,11 @@ app.get("/login", (req, res) => {
   res.render('login');
 });
 
+// trainings
+app.get("/trainings", (req, res) => {
+  res.render('trainings');
+});
+
 // Yahtzee - this file is used to make sure that everything works
 app.get("/hw7", (req, res) => {
     res.sendFile(path.join(__dirname + '/html/hw7/hw7.html'))
