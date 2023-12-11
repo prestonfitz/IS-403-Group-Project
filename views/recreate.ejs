@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Alex Fankhauser, Preston Fitzgerald, Seth Brock, Zach Hansen -->
+    <!-- Section 1, Group 11 -->
+    <!-- The purpose of this page is to create a variable that passes through session storage to alert the user of an invalid input -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/provoFavicon.png" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- this is a backup in case you get stuck on the page -->
+    Click <a href="/createAccount">here</a> if redirect failed
+    <!-- The purpose of this page is to create a variable that passes through session storage to alert the user of an invalid input -->
+    <!-- This sets a session storage variable and then redirects the user to the login page. -->
+    <script>sessionStorage.setItem('fail', 'true');
+        // window.location.href = '/createAccount'
+    </script>
+</body>
+
+</html>

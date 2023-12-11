@@ -68,6 +68,48 @@ app.post('/validate',(req,res) => { //This is the route called by the login func
     });
 })
 
+// These routes write
+
+// This function gets the timestamp of the survey submission
+function getTodayDate() {
+  // Implement this function as per your requirement
+  // For example, you can use the JavaScript Date object
+  return new Date().toISOString();
+}
+// this is a senior accountant (creates accounts)
+app.post("/newAccount", (req, res)=> {
+  // grab the usernames from the Accounts table in our database and push them to an array
+  knex.select('Email').from('Users').then(uname =>{
+    let aUsernames = [];
+    let limit = uname.length;
+    for(iCount = 0; iCount < limit; iCount++)
+    {
+      console.log('uname: ' + String(uname.length))
+      aUsernames.push(uname[0].Email);
+      uname.shift();
+    }
+    // check to see if the username is available and if it is, add the account to the database
+    if (!aUsernames.includes(req.body.email)){
+    knex("Users").insert({
+      FirstName: req.body.fname,
+      LastName: req.body.lname,
+      Phone: req.body.phone,
+      Email: req.body.email,
+      OrgName: req.body.orgname,
+      Password: req.body.pword,
+      ProfilePicURL: req.body.profpic,
+      DateCreated: getTodayDate()
+   }).then(account => {});
+  }
+  // if the username is not available, send them to the recreate page
+  // to do some javascript
+  else{return res.render('recreate')}
+
+  // redirect to the account page after successful creation
+  res.redirect("/login");
+ })
+});
+
 // protected functions
 // This helps the login page determine if it needs to generate an error message
 app.use('/loggedin', (req, res, next) => {
