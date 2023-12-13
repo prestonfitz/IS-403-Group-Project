@@ -256,7 +256,7 @@ app.post("/submitResponses", (req, res) => {
     UserID: req.session.userid,
     ProductID: req.body.id,
     QuestionNum: 1,
-    Response: req.body.answer1,
+    Response: req.body.answer1.toUpperCase(),
     ResponseDate: getTodayDate()
  }).then(account => {});
 
@@ -264,7 +264,7 @@ app.post("/submitResponses", (req, res) => {
     UserID: req.session.userid,
     ProductID: req.body.id,
     QuestionNum: 2,
-    Response: req.body.answer2,
+    Response: req.body.answer2.toUpperCase(),
     ResponseDate: getTodayDate()
  }).then(account => {});
 
@@ -272,7 +272,7 @@ app.post("/submitResponses", (req, res) => {
     UserID: req.session.userid,
     ProductID: req.body.id,
     QuestionNum: 3,
-    Response: req.body.answer3,
+    Response: req.body.answer3.toUpperCase(),
     ResponseDate: getTodayDate()
  }).then(account => {});
 
