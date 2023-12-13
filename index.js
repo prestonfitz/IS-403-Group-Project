@@ -68,6 +68,27 @@ app.post('/validate',(req,res) => { //This is the route called by the login func
     });
 })
 
+// log out (Cookie monster)
+app.get('/logout', function (req, res, next) {
+  // logout logic
+
+  // clear the user from the session object and save.
+  // this will ensure that re-using the old session id
+  // does not have a logged in user
+  req.session.loggedIn = null
+  req.session.userid = null
+  req.session.save(function (err) {
+    if (err) next(err)
+
+    // regenerate the session, which is good practice to help
+    // guard against forms of session fixation
+    req.session.regenerate(function (err) {
+      if (err) next(err)
+      res.redirect('/loggedOut')
+    })
+  })
+})
+
 // These routes write
 
 //This is an accountant (edits accounts)
