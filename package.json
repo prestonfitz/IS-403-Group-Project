@@ -14,7 +14,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "lint:ejs": "ejslint views/index.js"
+    "lint:ejs": "ejslint views/submitResponses.ejs"
   },
   "author": "Preston Fitzgerald, Seth Brock, Zach Hansen, Alex Fankhouser",
   "license": "ISC"
