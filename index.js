@@ -253,6 +253,12 @@ app.post("/submitResponses", (req, res) => {
   const id = req.body.id;
   const question1 = req.body.answer1;
 
+  knex("ProductsOwned").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    DatePurchased: getTodayDate()
+  }).then(account => {});
+
   knex("CourseResponses").insert({
     UserID: req.session.userid,
     ProductID: req.body.id,
@@ -276,12 +282,6 @@ app.post("/submitResponses", (req, res) => {
     Response: req.body.answer3.toUpperCase(),
     ResponseDate: getTodayDate()
  }).then(account => {});
-
- knex("ProductsOwned").insert({
-  UserID: req.session.userid,
-  ProductID: req.body.id,
-  DatePurchased: getTodayDate()
-}).then(account => {});
 
 // here I need to add a value for user id to pass it if we want to add it to the database
   return res.render('submitResponses', {name: name, id: id, question1: question1});
