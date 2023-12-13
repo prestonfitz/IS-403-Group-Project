@@ -181,6 +181,14 @@ app.use('/account', (req, res, next) => {
   next(); // Allow access to protected route
 });
 
+// This protects the trainings, because you can answer trainings
+app.use('/displayTraining', (req, res, next) =>{
+  console.log(req.session.loggedIn)
+  if (!req.session.loggedIn) {
+    return res.redirect('/login');
+  }
+  next(); // Allow access to protected route
+})
 
 // pages
 //log in and log out
