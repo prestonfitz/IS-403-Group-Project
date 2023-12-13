@@ -1,4 +1,4 @@
-// Intex Project
+// 403 Project
 // This is the index.js page. It is the brains of the node application that links everything together. 
 // Alex Fankhauser, Seth Brock, Zach Hansen, Preston Fitzgerald
 // Section 1 Group 11
@@ -277,9 +277,9 @@ app.get("/about", (req, res) => {
   res.render('about');
 });
 
-// Yahtzee - this file is used to make sure that everything works
-app.get("/hw7", (req, res) => {
-    res.sendFile(path.join(__dirname + '/html/hw7/hw7.html'))
+//404
+app.get('*', function(req, res){
+  res.status(404).render('404');
 });
 
 // set to listen
