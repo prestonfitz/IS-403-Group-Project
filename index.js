@@ -1,4 +1,4 @@
-// Intex Project
+// 403 Project
 // This is the index.js page. It is the brains of the node application that links everything together. 
 // Alex Fankhauser, Seth Brock, Zach Hansen, Preston Fitzgerald
 // Section 1 Group 11
@@ -181,6 +181,14 @@ app.use('/account', (req, res, next) => {
   next(); // Allow access to protected route
 });
 
+// This protects the trainings, because you can answer trainings
+app.use('/displayTraining', (req, res, next) =>{
+  console.log(req.session.loggedIn)
+  if (!req.session.loggedIn) {
+    return res.redirect('/login');
+  }
+  next(); // Allow access to protected route
+})
 
 // pages
 //log in and log out
@@ -244,29 +252,29 @@ app.post("/submitResponses", (req, res) => {
   const id = req.body.id;
   const question1 = req.body.answer1;
 
-//   knex("CourseResponses").insert({
-//     UserID: req.session.userid,
-//     ProductID: req.body.id,
-//     QuestionNum: 1,
-//     Response: req.body.answer1,
-//     ResponseDate: getTodayDat()
-//  }).then(account => {});
+  knex("CourseResponses").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    QuestionNum: 1,
+    Response: req.body.answer1,
+    ResponseDate: getTodayDat()
+ }).then(account => {});
 
-//   knex("CourseResponses").insert({
-//     UserID: req.session.userid,
-//     ProductID: req.body.id,
-//     QuestionNum: 2,
-//     Response: req.body.answer2,
-//     ResponseDate: getTodayDat()
-//  }).then(account => {});
+  knex("CourseResponses").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    QuestionNum: 2,
+    Response: req.body.answer2,
+    ResponseDate: getTodayDat()
+ }).then(account => {});
 
-//   knex("CourseResponses").insert({
-//     UserID: req.session.userid,
-//     ProductID: req.body.id,
-//     QuestionNum: 3,
-//     Response: req.body.answer3,
-//     ResponseDate: getTodayDat()
-//  }).then(account => {});
+  knex("CourseResponses").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    QuestionNum: 3,
+    Response: req.body.answer3,
+    ResponseDate: getTodayDat()
+ }).then(account => {});
 
 // here I need to add a value for user id to pass it if we want to add it to the database
   res.render('submitResponses', {name: name, id: id, question1: question1});
@@ -277,9 +285,9 @@ app.get("/about", (req, res) => {
   res.render('about');
 });
 
-// Yahtzee - this file is used to make sure that everything works
-app.get("/hw7", (req, res) => {
-    res.sendFile(path.join(__dirname + '/html/hw7/hw7.html'))
+//404
+app.get('*', function(req, res){
+  res.status(404).render('404');
 });
 
 // set to listen

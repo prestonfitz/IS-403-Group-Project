@@ -38,15 +38,88 @@
     </nav>
     <br><br><br><br>
     <div class="row justify-content-center">
+                    <!-- Biography Section-->
+                    <section class="page-section bg-primary text-white mb-0" id="about">
+                        <div class="container">
+                            <!-- Biography Section Heading-->
+                            <h2 class="page-section-heading text-center text-uppercase text-white">Thank you for your responses!</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom divider-light">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Biography Section Content-->
+                            <div class="row">
+                                <div class="col-lg-4 me-auto"><p class="lead">  </p></div>
+                                <div class="col-lg-4 ms-auto"><p class="lead">You have successfully completed the <%= name %> training. Application of this training will transform your school!</p></div>
+                                <div class="col-lg-4 me-auto"><p class="lead">  </p></div>
+                            </div>
+                        </div>
+                    </section>
+        <!-- Section for the portfolio -->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Leading Schools are Well-Rounded</h2><br><br>
         
-        <div class="col-md-6 col-lg-4 mb-5">
-            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                <!-- Div for the description with image -->
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-lg-start text-center">
+                            <p class="lead">This is only one of the 6 key factors that drive academic success. Schools that ignore 1 or more of the 6 factors 
+                                will discover problems that hinder students from achieving their full potential.
+                            </p>
+                            <p class="lead">Please explore the other available trainings to best prepare the next generation for success.</p>
+                            <div class="text-center mt-4">
+                                <a class="btn btn-xl btn-outline-light" href="/trainings#trainings" style="background-color: #2c3e50; color: #fff;">
+                                    View Trainings
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="assets/img/portfolio/pic2.png" alt="Image Description" class="img-fluid">
+                    </div>
                 </div>
-                <p>Thank you for answering the questions for the <%= name %> training.</p>
-                <p>Your response to question 1 was: <%= question1 %></p>
             </div>
+        </section>
+         <!-- Footer-->
+         <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Contact Us</h4>
+                        <p class="lead mb-0">
+                            karenjbrock@wix.com
+                            <br />
+                            801 367 5151
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://www.linkedin.com/in/dr-karen-johannesen-brock-a4021a9/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        
+                    </div>
+                    <!-- Footer About Text-->
+                    <!-- <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            .
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; 2023 by Karen Brock Consulting.</small></div>
         </div>
         <script>
             function loginCheck(){
