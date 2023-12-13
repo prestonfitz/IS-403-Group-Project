@@ -1,9 +1,11 @@
+<!-- This page displays the trainings that the user can look at. -->
+<!-- Group: Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="This is the simple sample homepage for the group project. Somebody should change this description later." />
+        <meta name="description" content="This is a page to display the trainings. " />
         <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
         <title><%= name %> | Karen Brock</title>
         <!-- Favicon-->
@@ -75,7 +77,7 @@
                             <div class="divider-custom-line"></div>
                         </div>
                         <br>
-                        <!-- Portfolio Grid Items-->
+                        <!-- Portfolio Grid Items. Dynamically change the youtube video based off of the training. -->
                         <div class="d-flex justify-content-center">
                             <% if (id == 1) { %>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/-MTRxRO5SRA?si=S-NqZvtL4SS_sa3L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -109,7 +111,7 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- About Section Content-->
+                <!-- This is for the survey responses based off of which training they are under.-->
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">
                         <% if (id == 1) { %>
