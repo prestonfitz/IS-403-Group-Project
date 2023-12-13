@@ -276,6 +276,12 @@ app.post("/submitResponses", (req, res) => {
     ResponseDate: getTodayDate()
  }).then(account => {});
 
+ knex("ProductsOwned").insert({
+  UserID: req.session.userid,
+  ProductID: req.body.id,
+  DatePurchased: getTodayDate()
+}).then(account => {});
+
 // here I need to add a value for user id to pass it if we want to add it to the database
   return res.render('submitResponses', {name: name, id: id, question1: question1});
 })
