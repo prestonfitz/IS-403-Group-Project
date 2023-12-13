@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Alex Fankhauser, Preston Fitzgerald, Seth Brock, Zach Hansen -->
     <!-- Section 1, Group 11 -->
     <!-- The purpose of this page is to pass information via a session variable that the user is successfully logged out. This allows the login to interact with the HTMl -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../assets/provoFavicon.png"/>
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../assets/provoFavicon.png" />
+    <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
+    <meta name="description" content="Page to redirect after logout">
+    <title>Redirecting...</title>
 </head>
+
 <body>
     <!-- This is a backup in case you get stuck on the page -->
     Click <a href="/">here</a> if redirect failed
     <!-- This sets a session storage variable and then redirects the user to the homepage. -->
-    <script>sessionStorage.setItem('login', 'false'); window.location.href='/'</script>
+    <script>sessionStorage.setItem('login', 'false'); window.location.href = '/'</script>
 </body>
+
 </html>
