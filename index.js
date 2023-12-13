@@ -242,7 +242,8 @@ app.post("/displayTraining", (req, res) => {
   console.log(req.body.trainingName);
   const trainingName = req.body.trainingName;
   const trainingID = req.body.trainingID;
-  res.render("displayTraining", {name: trainingName, id: trainingID});
+  const userid = req.session.userid;
+  res.render("displayTraining", {name: trainingName, id: trainingID, userid: userid});
 });    
 
 // submit responses to the questions
