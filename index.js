@@ -242,7 +242,7 @@ app.post("/displayTraining", (req, res) => {
   console.log(req.body.trainingName);
   const trainingName = req.body.trainingName;
   const trainingID = req.body.trainingID;
-  res.render("displayTraining", {name: trainingName, id: trainingID});
+  res.render("displayTraining", {name: trainingName, id: trainingID, userid: req.session.userid});
 });    
 
 // submit responses to the questions
@@ -284,6 +284,13 @@ app.post("/submitResponses", (req, res) => {
 
 // here I need to add a value for user id to pass it if we want to add it to the database
   return res.render('submitResponses', {name: name, id: id, question1: question1});
+})
+
+app.post("/submitResponses2", (req, res)=>{
+  const name = req.body.name;
+  const id = req.body.id;
+  const question1 = req.body.question1;
+  res.render('submitResponses2', {name: name, id: id, question1: question1})
 })
 
 // about
