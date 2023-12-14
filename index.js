@@ -253,12 +253,6 @@ app.post("/submitResponses", (req, res) => {
   const id = req.body.id;
   const question1 = req.body.answer1;
 
-  knex("ProductsOwned").insert({
-    UserID: req.session.userid,
-    ProductID: req.body.id,
-    DatePurchased: getTodayDate()
-  }).then(account => {});
-
   knex.select('UserID').from('ProductsOwned').then(products =>{
     let aProducts = [];
     let aUsers = [];
