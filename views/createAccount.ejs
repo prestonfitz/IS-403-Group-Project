@@ -7,8 +7,7 @@
     <!-- Section 1, Group 11 -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description"
-        content="This is the page where a user can create an account." />
+    <meta name="description" content="This is the page where a user can create an account." />
     <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
     <title>Home | Karen Brock</title>
     <!-- Favicon-->
@@ -66,8 +65,9 @@
                             href="/trainings">Trainings</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="#about">About</a></li>
-                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/account">Account</a></li>
-                            <span id="account"></span>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="/account">Account</a></li>
+                    <span id="account"></span>
                 </ul>
             </div>
         </div>
@@ -144,6 +144,7 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script>
+        // checks if email is already being used for an account
         function errorCheck() {
             if (sessionStorage.getItem('fail') == 'true') {
                 console.log('fail')
@@ -153,14 +154,16 @@
             sessionStorage.setItem('fail', false);
         }
     </script>
-            <script>
-                function loginCheck(){
-                if (sessionStorage.getItem('login') == 'true') {
-                    document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/logout">Log Out</a></li>';
-                    } else { 
-                    document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>'
-                    }}
-            </script>
+    <script>
+        // changes nav bar if they are logged in. I assume you've seen this already on the other pages
+        function loginCheck() {
+            if (sessionStorage.getItem('login') == 'true') {
+                document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/logout">Log Out</a></li>';
+            } else {
+                document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>'
+            }
+        }
+    </script>
 </body>
 
 </html>

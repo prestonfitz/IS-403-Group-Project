@@ -269,12 +269,12 @@ app.post("/submitResponses", (req, res) => {
           DatePurchased: getTodayDate()
         });
       }
-      // If the combination exists, you may choose to handle this case as needed
+      // If the combination exists we log it, then we resolve it so we can move on
       console.log("Record already exists in ProductsOwned");
-      return Promise.resolve(); // Resolve the promise to continue to the next insert
+      return Promise.resolve(); 
     })
     .then(() => {
-      // Continue with the other inserts or updates
+      // Now we insert to the course responses
       return knex("CourseResponses")
         .insert({
           UserID: userId,
@@ -282,12 +282,13 @@ app.post("/submitResponses", (req, res) => {
           QuestionNum: 1,
           Response: req.body.answer1.toUpperCase(),
           ResponseDate: getTodayDate()
-        })
-        .onConflict(['UserID', 'ProductID', 'QuestionNum']) // Handle duplicate keys
-        .merge(); // Update the existing record
+        })  // However, if the primary key already exists, just update the existing record with merge()
+        .onConflict(['UserID', 'ProductID', 'QuestionNum']) 
+        .merge(); 
     })
     .then(() => {
-      // Continue with the other inserts or updates
+      // Continue with the inserts for questions 2 and 3
+      // They follow the same logic as question 1 above
       return knex("CourseResponses")
         .insert({
           UserID: userId,
@@ -296,11 +297,10 @@ app.post("/submitResponses", (req, res) => {
           Response: req.body.answer2.toUpperCase(),
           ResponseDate: getTodayDate()
         })
-        .onConflict(['UserID', 'ProductID', 'QuestionNum']) // Handle duplicate keys
-        .merge(); // Update the existing record
+        .onConflict(['UserID', 'ProductID', 'QuestionNum'])
+        .merge(); 
     })
     .then(() => {
-      // Continue with the other inserts or updates
       return knex("CourseResponses")
         .insert({
           UserID: userId,
@@ -309,15 +309,17 @@ app.post("/submitResponses", (req, res) => {
           Response: req.body.answer3.toUpperCase(),
           ResponseDate: getTodayDate()
         })
-        .onConflict(['UserID', 'ProductID', 'QuestionNum']) // Handle duplicate keys
-        .merge(); // Update the existing record
+        .onConflict(['UserID', 'ProductID', 'QuestionNum']) 
+        .merge();
     })
     .then(() => {
-      // Render the response or redirect as needed
+      // Render the submit response page, pass the name, id, and question1 answer
+      // We initially were showing question1 in the submitResponses page but now we don't
       return res.render('submitResponses', { name: name, id: id, question1: question1 });
     })
     .catch(error => {
-      // Handle any errors that occurred during the process
+      // Catch any errors
+      // There shouldn't be because it works for us but hey, just in case
       console.error("Error:", error);
       return res.status(500).send("Internal Server Error");
     });

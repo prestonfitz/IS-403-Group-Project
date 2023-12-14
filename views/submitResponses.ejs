@@ -4,7 +4,7 @@
 <head>
     <!-- Alex Fankhauser, Preston Fitzgerald, Seth Brock, Zach Hansen -->
     <!-- Section 1 Group 11 -->
-    <!-- This page is a landing page. Provides a nice front-facing page for users to access links and resources -->
+    <!-- This page is displayed after a user submits their responses to the training questions -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description"
@@ -68,6 +68,7 @@
                         <p class="lead"> </p>
                     </div>
                     <div class="col-lg-4 ms-auto">
+                        <!-- Here we dynamically tell them which training they completed -->
                         <p class="lead">You have successfully completed the <%= name %> training. Application of this
                                 training will transform your school!</p>
                     </div>
@@ -77,10 +78,10 @@
                 </div>
             </div>
         </section>
-        <!-- Section for the portfolio -->
+        <!-- Section for encouraging the user to complete other trainings -->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
-                <!-- Portfolio Section Heading-->
+                <!-- Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Leading Schools are
                     Well-Rounded</h2><br><br>
 
@@ -95,6 +96,7 @@
                             <p class="lead">Please explore the other available trainings to best prepare the next
                                 generation for success.</p>
                             <div class="text-center mt-4">
+                                <!-- button that links back to the trainings page -->
                                 <a class="btn btn-xl btn-outline-light" href="/trainings#trainings"
                                     style="background-color: #2c3e50; color: #fff;">
                                     View Trainings
@@ -124,6 +126,8 @@
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
+                    <!-- Currently, the twitter and facebook icons don't link to anywhere but we left them here
+                    so Dr. Brock can link them when she creates a business account on those platforms -->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
@@ -135,17 +139,6 @@
                                 class="fab fa-fw fa-linkedin-in"></i></a>
 
                     </div>
-
-
-                    <!-- Footer About Text-->
-                    <!-- <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div> -->
                 </div>
             </div>
         </footer>
@@ -154,6 +147,7 @@
             <div class="container"><small>Copyright &copy; 2023 by Karen Brock Consulting.</small></div>
         </div>
         <script>
+            // checks to see if the person is logged in. Changes the nav bar to say either log in or logout
             function loginCheck() {
                 if (sessionStorage.getItem('login') == 'true') {
                     document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/logout">Log Out</a></li>';
