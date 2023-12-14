@@ -323,15 +323,6 @@ app.post("/submitResponses", (req, res) => {
     });
 });
 
-
-
-app.post("/submitResponses2", (req, res)=>{
-  const name = req.body.name;
-  const id = req.body.id;
-  const question1 = req.body.question1;
-  res.render('submitResponses2', {name: name, id: id, question1: question1})
-})
-
 // about
 app.get("/about", (req, res) => {
   res.render('about');

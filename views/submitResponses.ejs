@@ -24,7 +24,7 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-<body id="page-top" onload="loginCheck(), redirect()">
+<body id="page-top" onload="loginCheck()">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
@@ -136,13 +136,6 @@
 
                     </div>
 
-                    <!-- This form is part of a work around. Read more about it below.  -->
-                    <form action="/submitResponses2" method="post">
-                        <input type="hidden" name="name" id="name" value="<%= name %>">
-                        <input type="hidden" name="id" id="id" value="<%= id %>">
-                        <input type="hidden" name="question1" id="question1" value="<%= question1 %>">
-                        <button type="submit" id="submit" style="width: 0%;"></button>
-                    </form>
                     <!-- Footer About Text-->
                     <!-- <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About Freelancer</h4>
@@ -166,13 +159,6 @@
                 } else {
                     document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>'
                 }
-            }
-        </script>
-
-        <!-- Our CSS decided to break. We could figure out why, so I wrote this work around. It redirects to the exact same page.  -->
-        <script>
-            function redirect() {
-                document.getElementById("submit").click();
             }
         </script>
 
