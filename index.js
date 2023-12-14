@@ -242,8 +242,7 @@ app.post("/displayTraining", (req, res) => {
   console.log(req.body.trainingName);
   const trainingName = req.body.trainingName;
   const trainingID = req.body.trainingID;
-  const userid = req.session.userid;
-  res.render("displayTraining", {name: trainingName, id: trainingID, userid: userid});
+  res.render("displayTraining", {name: trainingName, id: trainingID});
 });    
 
 // submit responses to the questions
@@ -253,123 +252,38 @@ app.post("/submitResponses", (req, res) => {
   const id = req.body.id;
   const question1 = req.body.answer1;
 
-  knex.select('UserID').from('ProductsOwned').then(products =>{
-    let aProducts = [];
-    let aUsers = [];
-    for(iCount = 0; iCount < products.length; iCount++)
-    {
-      aUsers.push(products[iCount].UserID);
-    }
-    if (aUsers.includes(req.session.userid)){
-      knex.select('ProductID').from('ProductsOwned').then(products2 =>{
-        for(iCount = 0; iCount < products2.length; iCount++){
-          aProducts.push(products2[iCount].ProductID);
-        }
-        if (aProducts.includes(req.body.id)){
-          knex("CourseResponses").where("UserID", req.session.userid).where("ProductID", req.body.id).update({
-            UserID: req.session.userid,
-            ProductID: req.body.id,
-            QuestionNum: 1,
-            Response: req.body.answer1.toUpperCase(),
-            ResponseDate: getTodayDate()
-         }).then(account => {});
-        
-          knex("CourseResponses").where("UserID", req.session.userid).where("ProductID", req.body.id).update({
-            UserID: req.session.userid,
-            ProductID: req.body.id,
-            QuestionNum: 2,
-            Response: req.body.answer2.toUpperCase(),
-            ResponseDate: getTodayDate()
-         }).then(account => {});
-        
-          knex("CourseResponses").where("UserID", req.session.userid).where("ProductID", req.body.id).update({
-            UserID: req.session.userid,
-            ProductID: req.body.id,
-            QuestionNum: 3,
-            Response: req.body.answer3.toUpperCase(),
-            ResponseDate: getTodayDate()
-         }).then(account => {});
-        }
-        else{
-          knex("CourseResponses").insert({
-            UserID: req.session.userid,
-            ProductID: req.body.id,
-            QuestionNum: 1,
-            Response: req.body.answer1.toUpperCase(),
-            ResponseDate: getTodayDate()
-         }).then(account => {});
-        
-          knex("CourseResponses").insert({
-            UserID: req.session.userid,
-            ProductID: req.body.id,
-            QuestionNum: 2,
-            Response: req.body.answer2.toUpperCase(),
-            ResponseDate: getTodayDate()
-         }).then(account => {});
-        
-          knex("CourseResponses").insert({
-            UserID: req.session.userid,
-            ProductID: req.body.id,
-            QuestionNum: 3,
-            Response: req.body.answer3.toUpperCase(),
-            ResponseDate: getTodayDate()
-         }).then(account => {});
-        
-         knex("ProductsOwned").insert({
-          UserID: req.session.userid,
-          ProductID: req.body.id,
-          DatePurchased: getTodayDate()
-        }).then(account => {});
-        }
-      })
-    }
-    else{
-      knex("CourseResponses").insert({
-        UserID: req.session.userid,
-        ProductID: req.body.id,
-        QuestionNum: 1,
-        Response: req.body.answer1.toUpperCase(),
-        ResponseDate: getTodayDate()
-     }).then(account => {});
-    
-      knex("CourseResponses").insert({
-        UserID: req.session.userid,
-        ProductID: req.body.id,
-        QuestionNum: 2,
-        Response: req.body.answer2.toUpperCase(),
-        ResponseDate: getTodayDate()
-     }).then(account => {});
-    
-      knex("CourseResponses").insert({
-        UserID: req.session.userid,
-        ProductID: req.body.id,
-        QuestionNum: 3,
-        Response: req.body.answer3.toUpperCase(),
-        ResponseDate: getTodayDate()
-     }).then(account => {});
-    
-     knex("ProductsOwned").insert({
-      UserID: req.session.userid,
-      ProductID: req.body.id,
-      DatePurchased: getTodayDate()
-    }).then(account => {});
-    }
-  })
+  knex("CourseResponses").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    QuestionNum: 1,
+    Response: req.body.answer1.toUpperCase(),
+    ResponseDate: getTodayDate()
+ }).then(account => {});
 
+  knex("CourseResponses").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    QuestionNum: 2,
+    Response: req.body.answer2.toUpperCase(),
+    ResponseDate: getTodayDate()
+ }).then(account => {});
 
+  knex("CourseResponses").insert({
+    UserID: req.session.userid,
+    ProductID: req.body.id,
+    QuestionNum: 3,
+    Response: req.body.answer3.toUpperCase(),
+    ResponseDate: getTodayDate()
+ }).then(account => {});
+
+ knex("ProductsOwned").insert({
+  UserID: req.session.userid,
+  ProductID: req.body.id,
+  DatePurchased: getTodayDate()
+}).then(account => {});
 
 // here I need to add a value for user id to pass it if we want to add it to the database
   return res.render('submitResponses', {name: name, id: id, question1: question1});
-})
-
-// submit responses to the questions and display css
-app.post("/submitResponses2", (req, res) => {
-  console.log(req.body.question1);
-  const name = req.body.name;
-  const id = req.body.id;
-  const question1 = req.body.answer1;
-  res.render('submitResponses2.ejs', {name: name, id: id, question1: question1})
-
 })
 
 // about
