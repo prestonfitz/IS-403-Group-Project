@@ -252,40 +252,79 @@ app.post("/submitResponses", (req, res) => {
   const name = req.body.name;
   const id = req.body.id;
   const question1 = req.body.answer1;
+  const userId = req.session.userid;
 
-  knex("ProductsOwned").insert({
-    UserID: req.session.userid,
-    ProductID: req.body.id,
-    DatePurchased: getTodayDate()
-  }).then(account => {});
+  // Check if the combination of UserID and ProductID already exists in ProductsOwned
+  knex("ProductsOwned")
+    .where({
+      UserID: userId,
+      ProductID: req.body.id
+    })
+    .select("UserID")
+    .then(existingRecord => {
+      if (existingRecord.length === 0) {
+        // If the combination doesn't exist, insert into ProductsOwned
+        return knex("ProductsOwned").insert({
+          UserID: userId,
+          ProductID: req.body.id,
+          DatePurchased: getTodayDate()
+        });
+      }
+      // If the combination exists, you may choose to handle this case as needed
+      console.log("Record already exists in ProductsOwned");
+      return Promise.resolve(); // Resolve the promise to continue to the next insert
+    })
+    .then(() => {
+      // Continue with the other inserts or updates
+      return knex("CourseResponses")
+        .insert({
+          UserID: userId,
+          ProductID: req.body.id,
+          QuestionNum: 1,
+          Response: req.body.answer1.toUpperCase(),
+          ResponseDate: getTodayDate()
+        })
+        .onConflict(['UserID', 'ProductID', 'QuestionNum']) // Handle duplicate keys
+        .merge(); // Update the existing record
+    })
+    .then(() => {
+      // Continue with the other inserts or updates
+      return knex("CourseResponses")
+        .insert({
+          UserID: userId,
+          ProductID: req.body.id,
+          QuestionNum: 2,
+          Response: req.body.answer2.toUpperCase(),
+          ResponseDate: getTodayDate()
+        })
+        .onConflict(['UserID', 'ProductID', 'QuestionNum']) // Handle duplicate keys
+        .merge(); // Update the existing record
+    })
+    .then(() => {
+      // Continue with the other inserts or updates
+      return knex("CourseResponses")
+        .insert({
+          UserID: userId,
+          ProductID: req.body.id,
+          QuestionNum: 3,
+          Response: req.body.answer3.toUpperCase(),
+          ResponseDate: getTodayDate()
+        })
+        .onConflict(['UserID', 'ProductID', 'QuestionNum']) // Handle duplicate keys
+        .merge(); // Update the existing record
+    })
+    .then(() => {
+      // Render the response or redirect as needed
+      return res.render('submitResponses', { name: name, id: id, question1: question1 });
+    })
+    .catch(error => {
+      // Handle any errors that occurred during the process
+      console.error("Error:", error);
+      return res.status(500).send("Internal Server Error");
+    });
+});
 
-  knex("CourseResponses").insert({
-    UserID: req.session.userid,
-    ProductID: req.body.id,
-    QuestionNum: 1,
-    Response: req.body.answer1.toUpperCase(),
-    ResponseDate: getTodayDate()
- }).then(account => {});
 
-  knex("CourseResponses").insert({
-    UserID: req.session.userid,
-    ProductID: req.body.id,
-    QuestionNum: 2,
-    Response: req.body.answer2.toUpperCase(),
-    ResponseDate: getTodayDate()
- }).then(account => {});
-
-  knex("CourseResponses").insert({
-    UserID: req.session.userid,
-    ProductID: req.body.id,
-    QuestionNum: 3,
-    Response: req.body.answer3.toUpperCase(),
-    ResponseDate: getTodayDate()
- }).then(account => {});
-
-// here I need to add a value for user id to pass it if we want to add it to the database
-  return res.render('submitResponses', {name: name, id: id, question1: question1});
-})
 
 // submit responses to the questions and display css
 app.post("/submitResponses2", (req, res) => {
