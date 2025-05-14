@@ -1,221 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Alex Fankhauser, Preston Fitzgerald, Seth Brock, Zach Hansen -->
-        <!-- Section 1, Group 11 -->
-        <!-- The purpose of this page is to display the trainings available. It is a hub, so to speak. -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="This is the simple sample homepage for the group project. Somebody should change this description later." />
-        <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
-        <title>Trainings | Karen Brock</title>
-        <!-- Favicon-->
-        <!-- Original favicon src= assets/favicon.ico -->
-        <link rel="icon" type="image/x-icon" href="assets/img/circle3.png" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top" onload="loginCheck()">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="/">Karen J. Brock: Leading Schools</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Trainings</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/account">Account</a></li>
-                        <span id="account"></span>
-                    </ul>
+
+<head>
+    <!-- Alex Fankhauser, Preston Fitzgerald, Seth Brock, Zach Hansen -->
+    <!-- Section 1, Group 11 -->
+    <!-- The purpose of this page is to display the trainings available. It is a hub, so to speak. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="This is the simple sample homepage for the group project. Somebody should change this description later." />
+    <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
+    <title>Trainings | Karen Brock</title>
+    <!-- Favicon-->
+    <!-- Original favicon src= assets/favicon.ico -->
+    <link rel="icon" type="image/x-icon" href="assets/img/circle3.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" onload="loginCheck()">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="/">Karen J. Brock: Leading Schools</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#">Trainings</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="/about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="/account">Account</a></li>
+                    <span id="account"></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Details</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <!-- the empty divs here help with center alignment. DO NOT DELETE -->
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"></p>
+                </div>
+                <div class="col-lg-4" style="text-align: center;">
+                    <p class="lead">Dr. Brock's research has culminated in the creation of these trainings to help
+                        educators transform their schools into leading schoools. Dive into the 6 key factors below.</p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"></p>
                 </div>
             </div>
-        </nav>
-        <br><br><br>
-                <!-- About Section-->
-                <section class="page-section bg-primary text-white mb-0" id="about">
+            <!-- Button to scroll to see the trainings available -->
+            <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="#trainings">
+                    <!-- <i class="fas fa-download me-2"></i> -->
+                    Explore Trainings
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Trainings Section-->
+    <section class="page-section portfolio" id="trainings">
+        <div class="container">
+            <!-- Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Trainings</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <br>
+            <!-- Training Items-->
+            <div class="row justify-content-center">
+                <!-- Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <h3 style="text-align: center;">Professional Development</h3>
+                    <!-- the modal portion of this makes the pop up show up when you click on a training -->
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/prodev.avif" alt="..." />
+                    </div>
+                </div>
+                <!-- Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <h3 style="text-align: center;">Monitoring and Evaluation</h3>
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/check.avif" alt="..." />
+                    </div>
+                </div>
+                <!-- Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <h3 style="text-align: center;">Staff Involvement</h3>
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/coworkers.jpeg" alt="..." />
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <h3 style="text-align: center;">Instruction-based Vision</h3>
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/vision.avif" alt="..." />
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <h3 style="text-align: center;">Resource Reallocation</h3>
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/folders.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <h3 style="text-align: center;">Leadership</h3>
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/lead.jpeg" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Contact Us</h4>
+                    <p class="lead mb-0">
+                        karenjbrock@gmail.com
+                        <br />
+                        801 367 5151
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <!-- Currently, the twitter and facebook icons don't link to anywhere but we left them here
+                    so Dr. Brock can link them when she creates a business account on those platforms -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" target="_blank"
+                        href="https://www.linkedin.com/in/dr-karen-johannesen-brock-a4021a9/"><i
+                            class="fab fa-fw fa-linkedin-in"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; 2023 by Karen Brock Consulting.</small></div>
+    </div>
+    <!-- Portfolio Modals-->
+    <!-- Each modal contains a form that is submitted to dynamically change the displayTraining page if chosen -->
+    <!-- The first modal will be commented, the following five will have the same structure -->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
                     <div class="container">
-                        <!-- About Section Heading-->
-                        <h2 class="page-section-heading text-center text-uppercase text-white">Details</h2>
-                        <!-- Icon Divider-->
-                        <div class="divider-custom divider-light">
-                            <div class="divider-custom-line"></div>
-                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                            <div class="divider-custom-line"></div>
-                        </div>
-                        <!-- About Section Content-->
-                        <div class="row">
-                            <!-- the empty divs here help with center alignment. DO NOT DELETE -->
-                            <div class="col-lg-4 me-auto"><p class="lead"></p></div>
-                            <div class="col-lg-4" style="text-align: center;"><p class="lead">Dr. Brock's research has culminated in the creation of these trainings to help educators transform their schools into leading schoools. Dive into the 6 key factors below.</p></div>
-                            <div class="col-lg-4 me-auto"><p class="lead"></p></div>
-                        </div>
-                        <!-- About Section Button-->
-                        <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-light" href="#trainings">
-                                <!-- <i class="fas fa-download me-2"></i> -->
-                                Explore Trainings
-                            </a>
-                        </div>
-                    </div>
-                </section>
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="trainings">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Trainings</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <br>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <h3 style="text-align: center;">Professional Development</h3>
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/prodev.avif" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <h3 style="text-align: center;">Monitoring and Evaluation</h3>
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/check.avif" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <h3 style="text-align: center;">Staff Involvement</h3>
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/coworkers.jpeg" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4 -->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <h3 style="text-align: center;">Instruction-based Vision</h3>
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/vision.avif" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5 -->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <h3 style="text-align: center;">Resource Reallocation</h3>
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/folders.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6 -->
-                    <div class="col-md-6 col-lg-4">
-                        <h3 style="text-align: center;">Leadership</h3>
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/lead.jpeg" alt="..." />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Contact Us</h4>
-                        <p class="lead mb-0">
-                            karenjbrock@wix.com
-                            <br />
-                            801 367 5151
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://www.linkedin.com/in/dr-karen-johannesen-brock-a4021a9/"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        
-                    </div>
-                    <!-- Footer About Text-->
-                    <!-- <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div> -->
-                </div>
-            </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; 2023 by Karen Brock Consulting.</small></div>
-        </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Professional Development</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/prodev.avif" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Professional development ensures that each educator is well-equipped with the skills and knowledge necessary to help students thrive.</p>
-                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button> -->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm1()">
-                                        View Training
-                                    </button>
-                                    <div style="display: none;">
-                                        <form action="/displayTraining" method="post" id="trainingForm1">
-                                            <input type="hidden" id="trainingID" name="trainingID" value="1">
-                                            <input type="hidden" id="trainingName" name="trainingName" value="Professional Development">
-                                        </form>
-                                    </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Professional
+                                    Development</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Professional development ensures that each educator is well-equipped
+                                    with the skills and knowledge necessary to help students thrive.</p>
+                                <!-- this button is used to call a function that submits the following form -->
+                                <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm1()">
+                                    View Training
+                                </button>
+                                <div style="display: none;">
+                                    <!-- This post form submits the hidden inputs to the app.post("/displayTraining") route -->
+                                    <form action="/displayTraining" method="post" id="trainingForm1">
+                                        <input type="hidden" id="trainingID" name="trainingID" value="1">
+                                        <input type="hidden" id="trainingName" name="trainingName"
+                                            value="Professional Development">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -223,40 +250,39 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Monitoring and Evaluation</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/check.avif" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Instructors and students alike need monitoring and evaluation so they can receive deserved praise and encouraging feedback.</p>
-                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button> -->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm2()">
-                                        View Training
-                                    </button>
-                                    <div style="display: none;">
-                                        <form action="/displayTraining" method="post" id="trainingForm2">
-                                            <input type="hidden" id="trainingID" name="trainingID" value="2">
-                                            <input type="hidden" id="trainingName" name="trainingName" value="Monitoring and Evaluation">
-                                        </form>
-                                    </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Monitoring and
+                                    Evaluation</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Instructors and students alike need monitoring and evaluation so they
+                                    can receive deserved praise and encouraging feedback.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm2()">
+                                    View Training
+                                </button>
+                                <div style="display: none;">
+                                    <form action="/displayTraining" method="post" id="trainingForm2">
+                                        <input type="hidden" id="trainingID" name="trainingID" value="2">
+                                        <input type="hidden" id="trainingName" name="trainingName"
+                                            value="Monitoring and Evaluation">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -264,40 +290,39 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Level and Type of Staff Involvement</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/coworkers.jpeg" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Involving other staff at appropriate levels and in appropriate ways is integral to creating an empowering environment for students.</p>
-                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button> -->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm3()">
-                                        View Training
-                                    </button>
-                                    <div style="display: none;">
-                                        <form action="/displayTraining" method="post" id="trainingForm3">
-                                            <input type="hidden" id="trainingID" name="trainingID" value="3">
-                                            <input type="hidden" id="trainingName" name="trainingName" value="Level and Type of Staff Involvement">
-                                        </form>
-                                    </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Level and Type of
+                                    Staff Involvement</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Involving other staff at appropriate levels and in appropriate ways is
+                                    integral to creating an empowering environment for students.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm3()">
+                                    View Training
+                                </button>
+                                <div style="display: none;">
+                                    <form action="/displayTraining" method="post" id="trainingForm3">
+                                        <input type="hidden" id="trainingID" name="trainingID" value="3">
+                                        <input type="hidden" id="trainingName" name="trainingName"
+                                            value="Level and Type of Staff Involvement">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -305,40 +330,39 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Instruction-based Focus/Vision</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/vision.avif" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">The primary vision of all schools should be to instruct children in ways that help them reach their potential.</p>
-                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button> -->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm4()">
-                                        View Training
-                                    </button>
-                                    <div style="display: none;">
-                                        <form action="/displayTraining" method="post" id="trainingForm4">
-                                            <input type="hidden" id="trainingID" name="trainingID" value="4">
-                                            <input type="hidden" id="trainingName" name="trainingName" value="Instruction-based Focus/Vision">
-                                        </form>
-                                    </div>
+    </div>
+    <!-- Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Instruction-based
+                                    Focus/Vision</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">The primary vision of all schools should be to instruct children in ways
+                                    that help them reach their potential.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm4()">
+                                    View Training
+                                </button>
+                                <div style="display: none;">
+                                    <form action="/displayTraining" method="post" id="trainingForm4">
+                                        <input type="hidden" id="trainingID" name="trainingID" value="4">
+                                        <input type="hidden" id="trainingName" name="trainingName"
+                                            value="Instruction-based Focus/Vision">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -346,40 +370,39 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Resource Reallocation</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/folders.png" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">The distribution of resources varies from school to school. Learn how to reallocate resources to play to your strengths.</p>
-                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button> -->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm5()">
-                                        View Training
-                                    </button>
-                                    <div style="display: none;">
-                                        <form action="/displayTraining" method="post" id="trainingForm5">
-                                            <input type="hidden" id="trainingID" name="trainingID" value="5">
-                                            <input type="hidden" id="trainingName" name="trainingName" value="Resource Reallocation">
-                                        </form>
-                                    </div>
+    </div>
+    <!-- Portfolio Modal 5-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Resource
+                                    Reallocation</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">The distribution of resources varies from school to school. Learn how to
+                                    reallocate resources to play to your strengths.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm5()">
+                                    View Training
+                                </button>
+                                <div style="display: none;">
+                                    <form action="/displayTraining" method="post" id="trainingForm5">
+                                        <input type="hidden" id="trainingID" name="trainingID" value="5">
+                                        <input type="hidden" id="trainingName" name="trainingName"
+                                            value="Resource Reallocation">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -387,40 +410,37 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Leadership</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/portfolio/lead.jpeg" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Leadership is essential throughout the entire process of creating a leading school. Learn how to best lead other instructors and students.</p>
-                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button> -->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm6()">
-                                        View Training
-                                    </button>
-                                    <div style="display: none;">
-                                        <form action="/displayTraining" method="post" id="trainingForm6">
-                                            <input type="hidden" id="trainingID" name="trainingID" value="6">
-                                            <input type="hidden" id="trainingName" name="trainingName" value="Leadership">
-                                        </form>
-                                    </div>
+    </div>
+    <!-- Portfolio Modal 6-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Leadership</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Leadership is essential throughout the entire process of creating a
+                                    leading school. Learn how to best lead other instructors and students.</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm6()">
+                                    View Training
+                                </button>
+                                <div style="display: none;">
+                                    <form action="/displayTraining" method="post" id="trainingForm6">
+                                        <input type="hidden" id="trainingID" name="trainingID" value="6">
+                                        <input type="hidden" id="trainingName" name="trainingName" value="Leadership">
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -428,43 +448,47 @@
                 </div>
             </div>
         </div>
-        <script>
-            // Here are the functions to submit the forms created in the modals for each training topic
-            function submitForm1() {
-                document.getElementById("trainingForm1").submit();
-            }
-            function submitForm2() {
-                document.getElementById("trainingForm2").submit();
-            }
-            function submitForm3() {
-                document.getElementById("trainingForm3").submit();
-            }
-            function submitForm4() {
-                document.getElementById("trainingForm4").submit();
-            }
-            function submitForm5() {
-                document.getElementById("trainingForm5").submit();
-            }
-            function submitForm6() {
-                document.getElementById("trainingForm6").submit();
-            }
-        </script>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script>
-            function loginCheck(){
+    </div>
+    <script>
+        // Here are the functions to submit the forms created in the modals for each training topic
+        function submitForm1() {
+            document.getElementById("trainingForm1").submit();
+        }
+        function submitForm2() {
+            document.getElementById("trainingForm2").submit();
+        }
+        function submitForm3() {
+            document.getElementById("trainingForm3").submit();
+        }
+        function submitForm4() {
+            document.getElementById("trainingForm4").submit();
+        }
+        function submitForm5() {
+            document.getElementById("trainingForm5").submit();
+        }
+        function submitForm6() {
+            document.getElementById("trainingForm6").submit();
+        }
+    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+        // this will change the nav bar depending on if you are logged in or not
+        function loginCheck() {
             if (sessionStorage.getItem('login') == 'true') {
                 document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/logout">Log Out</a></li>';
-                } else { 
+            } else {
                 document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>'
-                }}
-        </script>
-    </body>
+            }
+        }
+    </script>
+</body>
+
 </html>

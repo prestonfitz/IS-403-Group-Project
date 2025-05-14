@@ -1,176 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- This is the account page for our website where a person can log in. -->
-        <!-- Group: Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen -->
-        <!-- Section 1, Group 11 -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="This is a page to display the trainings. " />
-        <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
-        <title><%= name %> | Karen Brock</title>
-        <!-- Favicon-->
-        <!-- Original favicon src= assets/favicon.ico -->
-        <link rel="icon" type="image/x-icon" href="assets/img/circle3.png" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top" onload="loginCheck()">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="/">Karen J. Brock: Leading Schools</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Home</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/account">Account</a></li>
-                        <span id="account"></span>
-                    </ul>
+
+<head>
+    <!-- Group: Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen -->
+    <!-- Section 1, Group 11 -->
+    <!-- This is the display training page. It changes depending on the values passed in the form
+        from the trainings page -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="This is a page to display the trainings. " />
+    <meta name="author" content="Preston Fitzgerald, Seth Brock, Alex Fankhauser, Zach Hansen" />
+    <title>
+        <%= name %> | Karen Brock
+    </title>
+    <!-- Favicon-->
+    <!-- Original favicon src= assets/favicon.ico -->
+    <link rel="icon" type="image/x-icon" href="assets/img/circle3.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" onload="loginCheck()">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="/">Karen J. Brock: Leading Schools</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="/trainings">Training</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="/about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="/account">Account</a></li>
+                    <span id="account"></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">
+                <%= name %>
+            </h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <!-- the empty divs here help with center alignment. DO NOT DELETE -->
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"></p>
+                </div>
+                <div class="col-lg-4" style="text-align: center;">
+                    <p class="lead">
+                        <%= name %> is an integral part to creating a leading school. Learn more below!
+                    </p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"></p>
                 </div>
             </div>
-        </nav>
-        <br><br><br>
-                <!-- About Section-->
-                <section class="page-section bg-primary text-white mb-0" id="about">
-                    <div class="container">
-                        <!-- About Section Heading-->
-                        <h2 class="page-section-heading text-center text-uppercase text-white"><%= name %></h2>
-                        <!-- Icon Divider-->
-                        <div class="divider-custom divider-light">
-                            <div class="divider-custom-line"></div>
-                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                            <div class="divider-custom-line"></div>
-                        </div>
-                        <!-- About Section Content-->
-                        <div class="row">
-                            <!-- the empty divs here help with center alignment. DO NOT DELETE -->
-                            <div class="col-lg-4 me-auto"><p class="lead"></p></div>
-                            <div class="col-lg-4" style="text-align: center;"><p class="lead"><%= name %> is an integral part to creating a leading school. Learn more below!</p></div>
-                            <div class="col-lg-4 me-auto"><p class="lead"></p></div>
-                        </div>
-                        <!-- About Section Button-->
-                        <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-light" href="#trainings">
-                                <!-- <i class="fas fa-download me-2"></i> -->
-                                Explore Training
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <section class="page-section portfolio" id="trainings">
-                    <div class="container">
-                        <!-- Portfolio Section Heading-->
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Sample Training Video</h2>
-                        <!-- Icon Divider-->
-                        <div class="divider-custom">
-                            <div class="divider-custom-line"></div>
-                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                            <div class="divider-custom-line"></div>
-                        </div>
-                        <br>
-                        <!-- Portfolio Grid Items. Dynamically change the youtube video based off of the training. -->
-                        <div class="d-flex justify-content-center">
-                            <% if (id == 1) { %>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-MTRxRO5SRA?si=S-NqZvtL4SS_sa3L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- About Section Button-->
+            <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="#trainings">
+                    <!-- <i class="fas fa-download me-2"></i> -->
+                    Explore Training
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="page-section portfolio" id="trainings">
+        <div class="container">
+            <!-- Section Heading-->
+            <!-- it says sample because the client has not yet created training videos -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Sample Training Video</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <br>
+            <!-- Dynamically change the youtube video based off of the training. -->
+            <div class="d-flex justify-content-center">
+                <% if (id==1) { %>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-MTRxRO5SRA?si=S-NqZvtL4SS_sa3L"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <% } %>
+                        <% if (id==2) { %>
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/pMUv6UWkuWw?si=Vsfm_iv-zXFayjMr"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                             <% } %>
-                            <% if (id == 2) { %>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/pMUv6UWkuWw?si=Vsfm_iv-zXFayjMr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <% } %>
-                            <% if (id == 3) { %>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/YKACzIrog24?si=YmXlKGz1EYhztT5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <% } %>
-                            <% if (id == 4) { %>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/4eBmyttcfU4?si=IzPzNXRNOLipMBSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <% } %>
-                            <% if (id == 5) { %>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-luPazaB0bc?si=ciL3I_uDEDxV_MDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <% } %>
-                            <% if (id == 6) { %>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/H14bBuluwB8?si=4NxIT6b9qFWEBBqR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <% } %>
-                        </div>
-                    </div>
-                </section>
-                        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Sample Survey Responses</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- This is for the survey responses based off of which training they are under.-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">
-                        <% if (id == 1) { %>
+                                <% if (id==3) { %>
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/YKACzIrog24?si=YmXlKGz1EYhztT5c"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                    <% } %>
+                                        <% if (id==4) { %>
+                                            <iframe width="560" height="315"
+                                                src="https://www.youtube.com/embed/4eBmyttcfU4?si=IzPzNXRNOLipMBSx"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen></iframe>
+                                            <% } %>
+                                                <% if (id==5) { %>
+                                                    <iframe width="560" height="315"
+                                                        src="https://www.youtube.com/embed/-luPazaB0bc?si=ciL3I_uDEDxV_MDg"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                    <% } %>
+                                                        <% if (id==6) { %>
+                                                            <iframe width="560" height="315"
+                                                                src="https://www.youtube.com/embed/H14bBuluwB8?si=4NxIT6b9qFWEBBqR"
+                                                                title="YouTube video player" frameborder="0"
+                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                                allowfullscreen></iframe>
+                                                            <% } %>
+            </div>
+        </div>
+    </section>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Sample Survey Responses</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- This is for the survey responses based off of which training they are under.-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead">
+                        <% if (id==1) { %>
                             How has your professional development helped you so far in your career?
-                        <% } %>
-                        <% if (id == 2) { %>
-                            How have monitoring and evaluating those in your stewardship helped build trust?
-                        <% } %>
-                        <% if (id == 3) { %>
-                            Why has involving other staff members in your endeavors been important in achieving your goals?
-                        <% } %>
-                        <% if (id == 4) { %>
-                            How do you prioritize the instruction of those in your stewardship?
-                        <% } %>
-                        <% if (id == 5) { %>
-                            Has the current allocation of resources helped or hindered your students in achieving their goals?
-                        <% } %>
-                        <% if (id == 6) { %>
-                            How has a great leader impacted your life--both personally and in your career?
-                        <% } %>
-                    </p></div>
-                    <div class="col-lg-4 ms-auto"><p class="lead">
-                        <% if (id == 1) { %>
+                            <% } %>
+                                <% if (id==2) { %>
+                                    How have monitoring and evaluating those in your stewardship helped build trust?
+                                    <% } %>
+                                        <% if (id==3) { %>
+                                            Why has involving other staff members in your endeavors been important in
+                                            achieving your goals?
+                                            <% } %>
+                                                <% if (id==4) { %>
+                                                    How do you prioritize the instruction of those in your stewardship?
+                                                    <% } %>
+                                                        <% if (id==5) { %>
+                                                            Has the current allocation of resources helped or hindered
+                                                            your students in achieving their goals?
+                                                            <% } %>
+                                                                <% if (id==6) { %>
+                                                                    How has a great leader impacted your life--both
+                                                                    personally and in your career?
+                                                                    <% } %>
+                    </p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead">
+                        <% if (id==1) { %>
                             What did you learn in the video about professional development?
-                        <% } %>
-                        <% if (id == 2) { %>
-                            What did you learn in the video about monitoring and evaluating?
-                        <% } %>
-                        <% if (id == 3) { %>
-                            What did you learn in the video about proper level and type of staff involvement?
-                        <% } %>
-                        <% if (id == 4) { %>
-                            What did you learn in the video about having an instruction-based vision?
-                        <% } %>
-                        <% if (id == 5) { %>
-                            What did you learn in the video about proper resource allocation?
-                        <% } %>
-                        <% if (id == 6) { %>
-                            What did you learn in the video about leadership in leading schools?
-                        <% } %>
-                    </p></div>
-                    <div class="col-lg-4 ms-auto"><p class="lead">
+                            <% } %>
+                                <% if (id==2) { %>
+                                    What did you learn in the video about monitoring and evaluating?
+                                    <% } %>
+                                        <% if (id==3) { %>
+                                            What did you learn in the video about proper level and type of staff
+                                            involvement?
+                                            <% } %>
+                                                <% if (id==4) { %>
+                                                    What did you learn in the video about having an instruction-based
+                                                    vision?
+                                                    <% } %>
+                                                        <% if (id==5) { %>
+                                                            What did you learn in the video about proper resource
+                                                            allocation?
+                                                            <% } %>
+                                                                <% if (id==6) { %>
+                                                                    What did you learn in the video about leadership in
+                                                                    leading schools?
+                                                                    <% } %>
+                    </p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead">
+                        <!-- the last question is the same for all trainings -->
                         How will you implement your new findings to make your school a leading school?
-                    </p></div>
-                    <form id="formResponses" action="/submitResponses" method="post">
-                        <div class="row">
-                            <div class="col-lg-4 ms-auto">
-                                <textarea id="answer1" name="answer1" rows="5" maxlength="1000" class="form-control"></textarea>
-                            </div>
-                            <div class="col-lg-4 ms-auto">
-                                <textarea id="answer2" name="answer2" rows="5" maxlength="1000" class="form-control"></textarea>
-                            </div>
-                            <div class="col-lg-4 ms-auto">
-                                <textarea id="answer3" name="answer3" rows="5" maxlength="1000" class="form-control"></textarea>
-                            </div>
+                    </p>
+                </div>
+                <!-- Here is the form they will submit with their text answers to the questions -->
+                <form id="formResponses" action="/submitResponses" method="post">
+                    <div class="row">
+                        <div class="col-lg-4 ms-auto">
+                            <textarea id="answer1" name="answer1" rows="5" maxlength="1000" class="form-control"></textarea>
                         </div>
-                        <input type="hidden" id="userid" name="userid" value="<%= userid %>">
-                        <input type="hidden" id="name" name="name" value="
+                        <div class="col-lg-4 ms-auto">
+                            <textarea id="answer2" name="answer2" rows="5" maxlength="1000" class="form-control"></textarea>
+                        </div>
+                        <div class="col-lg-4 ms-auto">
+                            <textarea id="answer3" name="answer3" rows="5" maxlength="1000" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <!-- these are hidden inputs to pass the userid and the training name in the form -->
+                    <input type="hidden" id="userid" name="userid" value="<%= userid %>">
+                    <input type="hidden" id="name" name="name" value="
                         <% if (id == 1) { %>
                             professional development
                         <% } %>
@@ -189,7 +250,10 @@
                         <% if (id == 6) { %>
                             leadership
                         <% } %>">
-                        <input type="hidden" id="id" name="id" value="
+                    <!-- this will pass the id value -->
+                    <!-- yes this could be simpler but as I comment this I don't want to change it-->
+                    <!-- If it ain't broke don't fix it -->
+                    <input type="hidden" id="id" name="id" value="
                         <% if (id == 1) { %>
                             1
                         <% } %>
@@ -209,65 +273,63 @@
                             6
                         <% } %>">
                 </form>
+            </div>
+            <!--Button to submit the form by calling the submitResponse function-->
+            <div class="text-center mt-4">
+                <button class="btn btn-xl btn-outline-light" onclick="submitResponse()">
+                    <!-- <i class="fas fa-download me-2"></i> -->
+                    Submit Answers
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Contact Us</h4>
+                    <p class="lead mb-0">
+                        karenjbrock@gmail.com
+                        <br />
+                        801 367 5151
+                    </p>
                 </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <button class="btn btn-xl btn-outline-light" onclick="submitResponse()">
-                        <!-- <i class="fas fa-download me-2"></i> -->
-                        Submit Answers
-                    </button>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" target="_blank"
+                        href="https://www.linkedin.com/in/dr-karen-johannesen-brock-a4021a9/"><i
+                            class="fab fa-fw fa-linkedin-in"></i></a>
+
                 </div>
             </div>
-        </section>
-                <!-- Footer-->
-                <footer class="footer text-center">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Footer Location-->
-                            <div class="col-lg-4 mb-5 mb-lg-0">
-                                <h4 class="text-uppercase mb-4">Contact Us</h4>
-                                <p class="lead mb-0">
-                                    karenjbrock@wix.com
-                                    <br />
-                                    801 367 5151
-                                </p>
-                            </div>
-                            <!-- Footer Social Icons-->
-                            <div class="col-lg-4 mb-5 mb-lg-0">
-                                <h4 class="text-uppercase mb-4">Around the Web</h4>
-                                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://www.linkedin.com/in/dr-karen-johannesen-brock-a4021a9/"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                                
-                            </div>
-                            <!-- Footer About Text-->
-                            <!-- <div class="col-lg-4">
-                                <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                                <p class="lead mb-0">
-                                    Freelance is a free to use, MIT licensed Bootstrap theme created by
-                                    <a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    .
-                                </p>
-                            </div> -->
-                        </div>
-                    </div>
-                </footer>
-                        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; 2023 by Karen Brock Consulting.</small></div>
         </div>
-        <script>
-            function submitResponse() {
-                document.getElementById("formResponses").submit();
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; 2023 by Karen Brock Consulting.</small></div>
+    </div>
+    <script>
+        // submit function
+        function submitResponse() {
+            document.getElementById("formResponses").submit();
+        }
+    </script>
+    <script>
+        // checks on page load for login. Changes nav bar depending on if someone is logged in or not
+        function loginCheck() {
+            if (sessionStorage.getItem('login') == 'true') {
+                document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/logout">Log Out</a></li>';
+            } else {
+                document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>'
             }
-        </script>
-                <script>
-                    function loginCheck(){
-                    if (sessionStorage.getItem('login') == 'true') {
-                        document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/logout">Log Out</a></li>';
-                        } else { 
-                        document.getElementById('account').innerHTML = '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/login">Log In</a></li>'
-                        }}
-                </script>
+        }
+    </script>
 </body>
+
 </html>
